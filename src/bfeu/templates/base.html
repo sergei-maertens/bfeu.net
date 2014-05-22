@@ -1,4 +1,4 @@
-{% load compress staticfiles %}<!DOCTYPE html>
+{% load compress staticfiles i18n %}<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -32,6 +32,39 @@
         <link rel="apple-touch-icon-precomposed" href="{% static 'bfeu/ico/apple-touch-icon-57-precomposed.png' %}">
     </head>
     <body class="{% block body-class %}{% endblock %}">
+
+        <div id="banner">
+            <a href="/" id="branding"></a>
+        </div>
+
+        <header class="container">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">{% trans "Toggle navigation" %}</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">{% trans "BF4 Europe" %}</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">{% trans "Tournaments" %}</a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://www.reddit.com/r/bf4_EU">{% trans "r/BF4_EU" %}</a></li>
+                            <li><a href="ts3server://ts27.gameservers.com?port=9326">{% trans "Teamspeak" %}</a></li>
+                            <li><a href="{% url 'admin:index' %}">{% trans "Login/admin" %}</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </div>
+        </header>
+
 
         <div class="container">
             <div class="row">

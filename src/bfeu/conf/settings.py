@@ -153,6 +153,7 @@ INSTALLED_APPS = [
     'compressor',
 
     # Project applications.
+    'bfeu.tournaments'
 ]
 
 LOGGING_DIR = os.path.join(ROOT_DIR, 'log')
@@ -237,6 +238,7 @@ LOGGING = {
 # Enable these when using HTTPS
 #
 
+SESSION_COOKIE_NAME = 'bfeusessionid'
 # SESSION_COOKIE_SECURE = True
 # SESSION_COOKIE_HTTPONLY = True
 # CSRF_COOKIE_SECURE = True

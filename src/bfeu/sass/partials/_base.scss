@@ -1,0 +1,20 @@
+#banner {
+  position: relative;
+  @include background(url('../img/bfeu_header.jpg') no-repeat center top);
+  border-bottom: solid 1px black;
+  height: 150px;
+}
+#branding {
+  display: block;
+  width: 320px;
+  height: 80px;
+  position: absolute;
+  left: 10%;
+  top: 22px;
+  @include background(url('../img/bf4eu.png') no-repeat center center);
+}
+header > .navbar {
+  position: relative;
+  top: -26px;
+  border-color: #555;
+}

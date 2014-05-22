@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # Simply show the master template.
-    (r'^$', TemplateView.as_view(template_name='master.html')),
+    (r'^$', TemplateView.as_view(template_name='base.html')),
 )
 
 # NOTE: The staticfiles_urlpatterns also discovers static files (ie. no need to run collectstatic). Both the static
